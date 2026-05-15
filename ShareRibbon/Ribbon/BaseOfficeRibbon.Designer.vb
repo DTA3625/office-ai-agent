@@ -30,9 +30,9 @@ Partial Class BaseOfficeRibbon
         Me.TabAI = Me.Factory.CreateRibbonTab
 
         ' Group 1: 免费强化版 - Deepseek/Doubao
-        Me.GroupDeepseek = Me.Factory.CreateRibbonGroup
-        Me.DeepseekButton = Me.Factory.CreateRibbonButton()
-        Me.DoubaoButton = Me.Factory.CreateRibbonButton()
+        ' Me.GroupDeepseek = Me.Factory.CreateRibbonGroup
+        ' Me.DeepseekButton = Me.Factory.CreateRibbonButton()
+        ' Me.DoubaoButton = Me.Factory.CreateRibbonButton()
 
         ' Group 2: 大模型配置 - 配置API/提示词
         Me.GroupConfig = Me.Factory.CreateRibbonGroup
@@ -81,7 +81,7 @@ Partial Class BaseOfficeRibbon
         Me.SuspendLayout()
 
         ' ========== TabAI 布局 ==========
-        Me.TabAI.Groups.Add(Me.GroupDeepseek)   ' 1. 免费强化版
+        ' Me.TabAI.Groups.Add(Me.GroupDeepseek)   ' 1. 免费强化版
         Me.TabAI.Groups.Add(Me.GroupConfig)     ' 2. 大模型配置
         Me.TabAI.Groups.Add(Me.GroupChat)       ' 3. AI对话
         Me.TabAI.Groups.Add(Me.GroupAIContent)  ' 4. AI内容提效
@@ -94,24 +94,24 @@ Partial Class BaseOfficeRibbon
         Me.TabAI.Name = "TabAI"
 
         ' ========== Group 1: 免费强化版 ==========
-        Me.GroupDeepseek.Items.Add(Me.DeepseekButton)
-        Me.GroupDeepseek.Items.Add(Me.DoubaoButton)
-        Me.GroupDeepseek.Label = "免费强化版"
-        Me.GroupDeepseek.Name = "GroupDeepseek"
+        ' Me.GroupDeepseek.Items.Add(Me.DeepseekButton)
+        ' Me.GroupDeepseek.Items.Add(Me.DoubaoButton)
+        ' Me.GroupDeepseek.Label = "免费强化版"
+        ' Me.GroupDeepseek.Name = "GroupDeepseek"
 
-        Me.DeepseekButton.Label = "Deepseek"
-        Me.DeepseekButton.Name = "DeepseekButton"
-        Me.DeepseekButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge
-        Me.DeepseekButton.ShowImage = True
-        Me.DeepseekButton.ScreenTip = "免费增强版"
-        Me.DeepseekButton.SuperTip = "在原有对话基础上，增加Agent执行能力"
+        ' Me.DeepseekButton.Label = "Deepseek"
+        ' Me.DeepseekButton.Name = "DeepseekButton"
+        ' Me.DeepseekButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge
+        ' Me.DeepseekButton.ShowImage = True
+        ' Me.DeepseekButton.ScreenTip = "免费增强版"
+        ' Me.DeepseekButton.SuperTip = "在原有对话基础上，增加Agent执行能力"
 
-        Me.DoubaoButton.Label = "Doubao"
-        Me.DoubaoButton.Name = "DoubaoButton"
-        Me.DoubaoButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge
-        Me.DoubaoButton.ShowImage = True
-        Me.DoubaoButton.ScreenTip = "豆包智能助手"
-        Me.DoubaoButton.SuperTip = "基于豆包的智能对话助手，支持代码执行"
+        ' Me.DoubaoButton.Label = "Doubao"
+        ' Me.DoubaoButton.Name = "DoubaoButton"
+        ' Me.DoubaoButton.ControlSize = Microsoft.Office.Core.RibbonControlSize.RibbonControlSizeLarge
+        ' Me.DoubaoButton.ShowImage = True
+        ' Me.DoubaoButton.ScreenTip = "豆包智能助手"
+        ' Me.DoubaoButton.SuperTip = "基于豆包的智能对话助手，支持代码执行"
 
         ' ========== Group 2: 大模型配置 ==========
         Me.GroupConfig.Items.Add(Me.ConfigApiButton)
@@ -283,9 +283,9 @@ Partial Class BaseOfficeRibbon
     Protected WithEvents TabAI As Microsoft.Office.Tools.Ribbon.RibbonTab
 
     ' Group 1: 免费强化版
-    Protected WithEvents GroupDeepseek As Microsoft.Office.Tools.Ribbon.RibbonGroup
-    Protected WithEvents DeepseekButton As Microsoft.Office.Tools.Ribbon.RibbonButton
-    Protected WithEvents DoubaoButton As Microsoft.Office.Tools.Ribbon.RibbonButton
+    ' Protected WithEvents GroupDeepseek As Microsoft.Office.Tools.Ribbon.RibbonGroup
+    ' Protected WithEvents DeepseekButton As Microsoft.Office.Tools.Ribbon.RibbonButton
+    ' Protected WithEvents DoubaoButton As Microsoft.Office.Tools.Ribbon.RibbonButton
 
     ' Group 2: 大模型配置
     Protected WithEvents GroupConfig As Microsoft.Office.Tools.Ribbon.RibbonGroup

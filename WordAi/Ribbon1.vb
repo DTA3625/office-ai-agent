@@ -32,13 +32,13 @@ Public Class Ribbon1
         Return New ApplicationInfo("Word", OfficeApplicationType.Word)
     End Function
 
-    Protected Overrides Sub DeepseekButton_Click(sender As Object, e As RibbonControlEventArgs)
-        Globals.ThisAddIn.ShowDeepseekTaskPane()
-    End Sub
+    'Protected Overrides Sub DeepseekButton_Click(sender As Object, e As RibbonControlEventArgs)
+    '    Globals.ThisAddIn.ShowDeepseekTaskPane()
+    'End Sub
 
-    Protected Overrides Sub DoubaoButton_Click(sender As Object, e As RibbonControlEventArgs)
-        Globals.ThisAddIn.ShowDoubaoTaskPane()
-    End Sub
+    'Protected Overrides Sub DoubaoButton_Click(sender As Object, e As RibbonControlEventArgs)
+    '    Globals.ThisAddIn.ShowDoubaoTaskPane()
+    'End Sub
     Protected Overrides Sub BatchDataGenButton_Click(sender As Object, e As RibbonControlEventArgs)
         MessageBox.Show("批量数据生成功能仅适用于 Excel。", "提示", MessageBoxButtons.OK, MessageBoxIcon.Information)
     End Sub

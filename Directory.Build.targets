@@ -1,0 +1,24 @@
+<Project>
+  <!-- Create placeholder XML documentation files for common System.* dependencies so vdproj packaging won't fail -->
+  <Target Name="CreatePlaceholderDependencyXmls" AfterTargets="CopyFilesToOutputDirectory" BeforeTargets="GenerateManifests">
+    <ItemGroup>
+      <_MissingXml Include="System.Buffers.xml" Condition="!Exists('$(OutputPath)System.Buffers.xml')" />
+      <_MissingXml Include="System.Numerics.Vectors.xml" Condition="!Exists('$(OutputPath)System.Numerics.Vectors.xml')" />
+      <_MissingXml Include="System.Memory.xml" Condition="!Exists('$(OutputPath)System.Memory.xml')" />
+      <_MissingXml Include="System.Runtime.CompilerServices.Unsafe.xml" Condition="!Exists('$(OutputPath)System.Runtime.CompilerServices.Unsafe.xml')" />
+      <_MissingXml Include="System.Threading.Tasks.Dataflow.xml" Condition="!Exists('$(OutputPath)System.Threading.Tasks.Dataflow.xml')" />
+      <_MissingXml Include="System.Text.Json.xml" Condition="!Exists('$(OutputPath)System.Text.Json.xml')" />
+      <_MissingXml Include="System.Diagnostics.DiagnosticSource.xml" Condition="!Exists('$(OutputPath)System.Diagnostics.DiagnosticSource.xml')" />
+    </ItemGroup>
+    <Touch Files="@(_MissingXml->'$(OutputPath)%(Identity)')" AlwaysCreate="true" Condition="@(_MissingXml->Count()) &gt; 0" />
+  </Target>
+
+  <!-- Copy System.Diagnostics.DiagnosticSource.dll from packages if missing in output (needed by vdproj) -->
+  <Target Name="CopyDiagnosticSourceDll" AfterTargets="CopyFilesToOutputDirectory" BeforeTargets="GenerateManifests">
+    <PropertyGroup>
+      <_DiagSrc>$(OutputPath)System.Diagnostics.DiagnosticSource.dll</_DiagSrc>
+      <_DiagSrcPkg>$(SolutionDir)packages\System.Diagnostics.DiagnosticSource.8.0.1\lib\net462\System.Diagnostics.DiagnosticSource.dll</_DiagSrcPkg>
+    </PropertyGroup>
+    <Copy SourceFiles="$(_DiagSrcPkg)" DestinationFiles="$(_DiagSrc)" Condition="!Exists('$(_DiagSrc)') And Exists('$(_DiagSrcPkg)')" />
+  </Target>
+</Project>

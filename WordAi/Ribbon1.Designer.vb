@@ -69,8 +69,8 @@ Partial Class Ribbon1
         Me.BatchDataGenButton.Visible = False
         Me.SpotlightButton.Visible = False
 
-        Me.DeepseekButton.Image = ShareRibbon.SharedResources.Deepseek
-        Me.DoubaoButton.Image = ShareRibbon.SharedResources.Doubao
+        'Me.DeepseekButton.Image = ShareRibbon.SharedResources.Deepseek
+        'Me.DoubaoButton.Image = ShareRibbon.SharedResources.Doubao
         Me.WebCaptureButton.Image = ShareRibbon.SharedResources.Send32
 
         Me.ContinuationButton.Image = ShareRibbon.SharedResources.Aiwrite

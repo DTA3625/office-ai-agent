@@ -144,10 +144,10 @@ Public MustInherit Class BaseOfficeRibbon
     Protected MustOverride Sub ReformatButton_Click(sender As Object, e As RibbonControlEventArgs) Handles ReformatButton.Click
 
     ' Deepseek按钮点击事件
-    Protected MustOverride Sub DeepseekButton_Click(sender As Object, e As RibbonControlEventArgs) Handles DeepseekButton.Click
+    'Protected MustOverride Sub DeepseekButton_Click(sender As Object, e As RibbonControlEventArgs) Handles DeepseekButton.Click
 
     ' Doubao按钮点击事件
-    Protected MustOverride Sub DoubaoButton_Click(sender As Object, e As RibbonControlEventArgs) Handles DoubaoButton.Click
+    'Protected MustOverride Sub DoubaoButton_Click(sender As Object, e As RibbonControlEventArgs) Handles DoubaoButton.Click
 
     ' 批量数据生成按钮点击事件
     Protected MustOverride Sub BatchDataGenButton_Click(sender As Object, e As RibbonControlEventArgs) Handles BatchDataGenButton.Click

@@ -197,14 +197,14 @@ Public Class Ribbon1
     End Function
 
     ' Deepseek按钮点击事件实现
-    Protected Overrides Sub DeepseekButton_Click(sender As Object, e As RibbonControlEventArgs)
-        Globals.ThisAddIn.ShowDeepseekTaskPane()
-    End Sub
+    'Protected Overrides Sub DeepseekButton_Click(sender As Object, e As RibbonControlEventArgs)
+    '    Globals.ThisAddIn.ShowDeepseekTaskPane()
+    'End Sub
 
     ' Doubao按钮点击事件实现
-    Protected Overrides Sub DoubaoButton_Click(sender As Object, e As RibbonControlEventArgs)
-        Globals.ThisAddIn.ShowDoubaoTaskPane()
-    End Sub
+    'Protected Overrides Sub DoubaoButton_Click(sender As Object, e As RibbonControlEventArgs)
+    '    Globals.ThisAddIn.ShowDoubaoTaskPane()
+    'End Sub
 
     ' 批量数据生成按钮点击事件实现
     Protected Overrides Async Sub BatchDataGenButton_Click(sender As Object, e As RibbonControlEventArgs)

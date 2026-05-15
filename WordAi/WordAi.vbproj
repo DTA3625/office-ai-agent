@@ -408,7 +408,7 @@
     <ManifestCertificateThumbprint>4FD4775958129CB89DEE0E74E97DBA2A6D6D2D01</ManifestCertificateThumbprint>
   </PropertyGroup>
   <!-- PostBuild: copy unsigned Markdig.dll to output (avoids VSTO manifest signing error MSB3178) -->
-  <Target Name="CopyUnsignedDllsAfterBuild" AfterTargets="Build">
+  <Target Name="CopyUnsignedDllsAfterBuild" AfterTargets="CopyFilesToOutputDirectory" BeforeTargets="GenerateManifests">
     <Copy SourceFiles="..\packages\Markdig.0.41.1\lib\net462\Markdig.dll" DestinationFolder="$(OutputPath)" SkipUnchangedFiles="true" Condition="Exists('..\packages\Markdig.0.41.1\lib\net462\Markdig.dll')" />
   </Target>
   <!-- Include the build rules for a Visual Basic project. -->
